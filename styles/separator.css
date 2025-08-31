@@ -4,6 +4,10 @@
 .separator__content {
   margin: 0 auto;
   width: 740px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .separator__title {
   display: flex;
