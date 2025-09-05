@@ -201,3 +201,75 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeId = requestAnimationFrame(step);
   }
 });
+
+// Slider
+const sliderData = [
+  {
+    id: 0,
+    title: "ЧТО НЕОБХОДИМО ВЗЯТЬ С<br>СОБОЙ НА СЕРФ ТУР",
+    subtitle: "ТОП 20 необходимых вещей для комфортного отдыха и обучения",
+    background: "/assets/bg_slider.png",
+  },
+  {
+    id: 1,
+    title: "ТОП 20",
+    subtitle: "ТОП 20 необходимых вещей для комфортного отдыха и обучения",
+    background: "/assets/bg_slider.png",
+  },
+];
+
+const slider = document.getElementById("slider");
+
+sliderData.forEach((slide, indx) => {
+  let slideHTML = `
+    <div class="slide ${indx === 0 ? "active" : ""}" 
+        style="background-image: url(${slide.background})">
+      <div class="slider_title">
+        <h2 class="slider_title_item">${slide.title}</h2>
+        <p class="slider_subtitle_item">${slide.subtitle}</p>
+      </div>
+      
+    </div>`;
+
+  slider.insertAdjacentHTML("beforeend", slideHTML);
+});
+
+const pagination = document.createElement("div");
+pagination.classList.add("pagination");
+slider.appendChild(pagination);
+
+const slides = document.querySelectorAll(".slide");
+
+slides.forEach((_, index) => {
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
+  if (index === 0) dot.classList.add("active");
+  dot.dataset.index = index;
+  pagination.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  slides.forEach((item, i) => {
+    item.classList.toggle("active", i === index);
+  });
+  dots.forEach((el, idx) => {
+    el.classList.toggle("active", idx === index);
+  });
+}
+
+dots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    currentSlide = parseInt(dot.dataset.index);
+    showSlide(currentSlide);
+  });
+});
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 3000);
+// Slider/
