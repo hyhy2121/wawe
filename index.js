@@ -1,13 +1,15 @@
-const burgerToggle = document.querySelector(".burger");
-const navMenu = document.querySelector(".nav");
+// Burger
+const burgerToggle = document.getElementById("burger");
+const navMenu = document.getElementById("nav");
 const body = document.body;
-const tabToggle = document.querySelectorAll(".tab");
 
 burgerToggle.addEventListener("click", () => {
   burgerToggle.classList.toggle("active");
   navMenu.classList.toggle("active");
   body.classList.toggle("no-scroll");
 });
+
+// Burger/
 
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".hidden");
@@ -34,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".tab");
-  const cardSection = document.querySelectorAll(".cards");
+  const tabs = document.querySelectorAll(".gallery__tab");
+  const cardSection = document.querySelectorAll(".gallery__cards");
 
   function switchTab(selected) {
     tabs.forEach((t) => {
