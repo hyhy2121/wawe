@@ -100,12 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (video.paused) {
       video.play();
       playPause.innerHTML =
-        '<img src="/assets/main/pause_white.svg" alt="Pause" width="15"/>';
+        '<img src="assets/main/pause_white.svg" alt="Pause" width="15"/>';
       updateSeekSmooth();
     } else {
       video.pause();
       playPause.innerHTML =
-        '<img src="/assets/main/play_white.svg" alt="Play" width="14"/>';
+        '<img src="assets/main/play_white.svg" alt="Play" width="14"/>';
       cancelAnimationFrame(rafId);
     }
   });
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   video.addEventListener("ended", () => {
     cancelAnimationFrame(rafId);
     playPause.innerHTML =
-      '<img src="/assets/main/play_white.svg" alt="Play" width="14"/>';
+      '<img src="assets/main/play_white.svg" alt="Play" width="14"/>';
     updateTimeDisplay();
   });
 
@@ -153,9 +153,9 @@ document.addEventListener("DOMContentLoaded", () => {
     video.muted = vol === 0;
 
     if (video.muted) {
-      muteUnmute.innerHTML = '<img src="/assets/main/mute.svg" width="18"/>';
+      muteUnmute.innerHTML = '<img src="assets/main/mute.svg" width="18"/>';
     } else {
-      muteUnmute.innerHTML = '<img src="/assets/main/unmute.svg" width="18"/>';
+      muteUnmute.innerHTML = '<img src="assets/main/unmute.svg" width="18"/>';
       lastVolume = vol;
     }
   });
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
         video.muted = false;
         volumeBar.value = Math.round(targetVolume * 100);
       });
-      muteUnmute.innerHTML = '<img src="/assets/main/unmute.svg" width="18"/>';
+      muteUnmute.innerHTML = '<img src="assets/main/unmute.svg" width="18"/>';
     } else {
       lastVolume = video.volume;
       fadeVolume(video.volume, 0, 300, () => {
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
         video.muted = true;
         volumeBar.value = 0;
       });
-      muteUnmute.innerHTML = '<img src="/assets/main/mute.svg" width="18"/>';
+      muteUnmute.innerHTML = '<img src="assets/main/mute.svg" width="18"/>';
     }
   });
 
@@ -210,13 +210,13 @@ const sliderData = [
     id: 0,
     title: "ЧТО НЕОБХОДИМО ВЗЯТЬ С<br>СОБОЙ НА СЕРФ ТУР",
     subtitle: "ТОП 20 необходимых вещей для комфортного отдыха и обучения",
-    background: "/assets/main/bg_slider.png",
+    background: "assets/main/bg_slider.png",
   },
   {
     id: 1,
     title: "ТОП 20",
     subtitle: "ТОП 20 необходимых вещей для комфортного отдыха и обучения",
-    background: "/assets/main/bg_slider.png",
+    background: "assets/main/bg_slider.png",
   },
 ];
 

@@ -240,7 +240,7 @@ body.no-scroll {
 
 /* Main */
 .hero {
-  background-image: url("/assets/main//bg.png");
+  background-image: url("assets/main//bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -977,7 +977,7 @@ body.no-scroll {
     height: 100vh;
     display: block;
     position: relative;
-    background-image: url("/assets/main/conquer_bg.png");
+    background-image: url("assets/main/conquer_bg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
