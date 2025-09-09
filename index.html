@@ -22,7 +22,7 @@
       <div class="container">
         <div class="header__content">
           <a href="#" class="header__logo">
-            <img src="/assets/logo.svg" alt="wawe" />
+            <img class="logo__icon" src="/assets/logo.svg" alt="wawe" />
           </a>
 
           <nav class="header__nav" id="nav">
@@ -147,7 +147,7 @@
             <div class="receive__text">
               <h2 class="receive__title title">В ШКОЛЕ ВЫ ПОЛУЧИТЕ</h2>
               <ul class="receive__list">
-                <li class="receive___item hidden">
+                <li class="receive__item hidden">
                   <h3 class="receive__item-title">
                     <img
                       src="/assets/main/sun.svg"
@@ -157,13 +157,13 @@
                     ПРОЖИВАНИЕ
                   </h3>
                   <p class="receive__item-text text">
-                    Наша школа серфинга находится в 100 м от океанского
+                    Наша школа серфинга находится в 100 м от океанского<br />
                     побережья. К услугам гостей открытый бассейн и<br />бесплатный
-                    Wi-Fi. Из верхней террасы открывается<br />
-                    вид на океан. Расстояние до центра города 15 мин.
+                    Wi-Fi. Из верхней террасы открывается<br />вид на океан.
+                    Расстояние до центра города 15 мин.
                   </p>
                 </li>
-                <li class="receive___item hidden">
+                <li class="receive__item hidden">
                   <h3 class="receive__item-title">
                     <img
                       src="/assets/main/airplane.svg"
@@ -179,7 +179,7 @@
                     входит в стоимость программы
                   </p>
                 </li>
-                <li class="receive___item hidden">
+                <li class="receive__item hidden">
                   <h3 class="receive__item-title">
                     <img
                       src="/assets/main/surf.svg"
@@ -209,8 +209,8 @@
                         />
                         <p class="progress__value">85%</p>
                       </div>
+                      <p class="progress__subtitle">Приехали второй раз</p>
                     </div>
-                    <p class="progress__subtitle">Приехали второй раз</p>
                   </div>
                   <div class="progress__item">
                     <div class="progress__info">
@@ -285,7 +285,7 @@
                   серферов среднего уровня, так и на серферов уровня ТОП.
                   Тренеры находят подход к каждому, несмотря на то, что обучение
                   серфингу в нашей школе производится в группах. Однако, мы
-                  предлагаем персональные уроки серфинга - только вы и тренер! П
+                  предлагаем персональные уроки серфинга - только вы и тренер!
                 </p>
               </div>
             </div>
@@ -410,37 +410,44 @@
 
       <section class="video">
         <div class="container">
-          <div class="video-player">
-            <div class="video-wrapper">
+          <div class="video__player">
+            <div class="video__inner">
               <video
                 id="customVideo"
-                class="video"
-                src="/assets/main/video/video.mp4"
+                class="video__source"
+                src="/assets/video/video.mp4"
               ></video>
             </div>
-            <div class="controls">
-              <div class="top">
-                <input id="seekBar" type="range" min="0" value="0" />
+            <div class="video__controls">
+              <div class="video__controls-top">
+                <input
+                  class="video__seek-bar"
+                  id="seekBar"
+                  type="range"
+                  min="0"
+                  value="0"
+                />
               </div>
-              <div class="bot">
-                <button class="btn_video" id="playPause">
+              <div class="video__controls-bottom">
+                <button class="video__button" id="playPause">
                   <img
-                    class="img_video"
+                    class="video__icon"
                     src="/assets/main/play_white.svg"
                     alt="play"
                   />
                 </button>
-                <button class="btn_video" id="muteUnmute">
+                <button class="video__button" id="muteUnmute">
                   <img src="/assets/main/unmute.svg" width="15" />
                 </button>
                 <input
+                  class="video__volume-bar"
                   id="volumeBar"
                   type="range"
                   min="0"
                   max="100"
                   value="100"
                 />
-                <span id="timeDisplay" class="time">0:00 / 0:00</span>
+                <span id="timeDisplay" class="video__time">0:00 / 0:00</span>
               </div>
             </div>
           </div>
@@ -449,67 +456,80 @@
 
       <section class="indicators">
         <div class="container">
-          <div class="wrapper_titles">
-            <div class="indicators_title">
-              <h2 class="indicators_title_item">450</h2>
-              <p class="indicators_subtitle_item">туристов</p>
-            </div>
-            <div class="indicators_title">
-              <h2 class="indicators_title_item">2500</h2>
-              <p class="indicators_subtitle_item">часов катания</p>
-            </div>
-            <div class="indicators_title">
-              <h2 class="indicators_title_item">10</h2>
-              <p class="indicators_subtitle_item">проф. тренеров</p>
-            </div>
-            <div class="indicators_title">
-              <h2 class="indicators_title_item">365</h2>
-              <p class="indicators_subtitle_item">дней в году</p>
-            </div>
-          </div>
+          <ul class="indicators__list">
+            <li class="indicators__item">
+              <h2 class="indicators__value">450</h2>
+              <p class="indicators__label text">туристов</p>
+            </li>
+            <li class="indicators__item">
+              <h2 class="indicators__value">2500</h2>
+              <p class="indicators__label text">часов катания</p>
+            </li>
+            <li class="indicators__item">
+              <h2 class="indicators__value">10</h2>
+              <p class="indicators__label text">проф. тренеров</p>
+            </li>
+            <li class="indicators__item">
+              <h2 class="indicators__value">365</h2>
+              <p class="indicators__label text">дней в году</p>
+            </li>
+          </ul>
         </div>
       </section>
 
       <section class="blog">
         <div class="container">
-          <div class="blog_title">
-            <h2 class="blog_title_item">БЛОГ</h2>
+          <div class="blog__header">
+            <h2 class="blog__title title">БЛОГ</h2>
           </div>
         </div>
-        <div class="slider_wrapper" id="slider"></div>
+        <div class="blog__slider" id="slider"></div>
       </section>
 
       <section class="team">
         <div class="container">
-          <div class="team_title">
-            <h2 class="team_title_item">НАША КОМАНДА</h2>
+          <div class="team__header">
+            <h2 class="team__title title">НАША КОМАНДА</h2>
           </div>
-          <div class="team_wrapper_card">
-            <div class="team_card">
-              <div class="profile">
-                <img src="/assets/main/team1.png" alt />
+
+          <div class="team__list">
+            <div class="team__card">
+              <div class="team__card-photo">
+                <img
+                  class="photo__item"
+                  src="/assets/main/team1.png"
+                  alt="Mike"
+                />
               </div>
-              <div class="text">
-                <h3 class="team_card_title">Mike</h3>
-                <p class="team_subtitle_text">Главный инстуктор</p>
-              </div>
-            </div>
-            <div class="team_card">
-              <div class="profile">
-                <img src="/assets/main/team2.png" alt />
-              </div>
-              <div class="text">
-                <h3 class="team_card_title">Mary</h3>
-                <p class="team_subtitle_text">инстуктор</p>
+              <div class="team__card-info">
+                <h3 class="team__card-name">Mike</h3>
+                <p class="team__card-role">Главный инстуктор</p>
               </div>
             </div>
-            <div class="team_card">
-              <div class="profile">
-                <img src="/assets/main/team3.png" alt />
+            <div class="team__card">
+              <div class="team__card-photo">
+                <img
+                  class="photo__item"
+                  src="/assets/main/team2.png"
+                  alt="Mary"
+                />
               </div>
-              <div class="text">
-                <h3 class="team_card_title">Ольга</h3>
-                <p class="team_subtitle_text">инстуктор</p>
+              <div class="team__card-info">
+                <h3 class="team__card-name">Mary</h3>
+                <p class="team__card-role">инстуктор</p>
+              </div>
+            </div>
+            <div class="team__card">
+              <div class="team__card-photo">
+                <img
+                  class="photo__item"
+                  src="/assets/main/team3.png"
+                  alt="Ольга"
+                />
+              </div>
+              <div class="team__card-info">
+                <h3 class="team__card-name">Ольга</h3>
+                <p class="team__card-role">инстуктор</p>
               </div>
             </div>
           </div>
@@ -518,94 +538,93 @@
 
       <section class="services">
         <div class="container">
-          <div class="services_title">
-            <h2 class="services_title_item">ПАКЕТЫ УСЛУГ</h2>
+          <div class="wrapper__title">
+            <h2 class="services__title title">ПАКЕТЫ УСЛУГ</h2>
           </div>
-          <div class="services_wrapper_card">
-            <div class="services_card">
-              <div class="services_card_content">
-                <div class="services_card_title">
-                  <h3 class="services_card_title-item">Стандарт</h3>
-                </div>
-                <div class="services_card_text">
-                  <p class="services_card_text-item">
-                    Проживание на вилле 6 ночей
-                  </p>
-                  <p class="services_card_text-item">
-                    Номер категории стандарт
-                  </p>
-                  <p class="services_card_text-item">Экипировка для обучения</p>
-                  <p class="services_card_text-item">
-                    Обучение серфингу 5 тренировок по 2 часа
-                  </p>
-                  <p class="services_card_text-item">Страховка</p>
-                  <p class="services_card_text-item">
-                    Вечеринка с угощениями и дискотекой
-                  </p>
-                </div>
-                <div class="services_card_price">
-                  <h3 class="services_card_price-item"><u>450</u>$</h3>
-                </div>
+          <div class="services__list">
+            <div class="services__card">
+              <h3 class="services__card-title">Стандарт</h3>
+
+              <div class="services__card-text">
+                <p class="services__card-text-item text">
+                  Проживание на вилле 6 ночей
+                </p>
+                <p class="services__card-text-item text">
+                  Номер категории стандарт
+                </p>
+                <p class="services__card-text-item text">
+                  Экипировка для обучения
+                </p>
+                <p class="services__card-text-item text">
+                  Обучение серфингу 5 тренировок по 2 часа
+                </p>
+                <p class="services__card-text-item text">Страховка</p>
+                <p class="services__card-text-item text">
+                  Вечеринка с угощениями и дискотекой
+                </p>
+              </div>
+              <div class="services__card-price">
+                <h3 class="services__card-price-value"><u>450</u>$</h3>
               </div>
             </div>
-            <div class="services_card">
-              <div class="services_card_content">
-                <div class="services_card_title">
-                  <h3 class="services_card_title-item">Все включено</h3>
-                </div>
-                <div class="services_card_text">
-                  <p class="services_card_text-item">
-                    Проживание на вилле 6 ночей
-                  </p>
-                  <p class="services_card_text-item">Номер категории люкс</p>
-                  <p class="services_card_text-item">Экипировка для обучения</p>
-                  <p class="services_card_text-item">
-                    Обучение серфингу 8 тренировок по 2 часа
-                  </p>
-                  <p class="services_card_text-item">Страховка</p>
-                  <p class="services_card_text-item">
-                    Вечеринка с угощениями и дискотекой
-                  </p>
-                  <p class="services_card_text-item">
-                    Авиа перелет Тенерифе -Лансароте - Тенерифе
-                  </p>
-                  <p class="services_card_text-item">Завтраки на вилле</p>
-                </div>
-                <div class="services_card_price">
-                  <h3 class="services_card_price-item"><u>950</u>$</h3>
-                </div>
+            <div class="services__card">
+              <h3 class="services__card-title">Все включено</h3>
+
+              <div class="services__card-text">
+                <p class="services__card-text-item text">
+                  Проживание на вилле 6 ночей
+                </p>
+                <p class="services__card-text-item text">
+                  Номер категории люкс
+                </p>
+                <p class="services__card-text-item text">
+                  Экипировка для обучения
+                </p>
+                <p class="services__card-text-item text">
+                  Обучение серфингу 8 тренировок по 2 часа
+                </p>
+                <p class="services__card-text-item text">Страховка</p>
+                <p class="services__card-text-item text">
+                  Вечеринка с угощениями и дискотекой
+                </p>
+                <p class="services__card-text-item text">
+                  Авиа перелет Тенерифе -Лансароте - Тенерифе
+                </p>
+                <p class="services__card-text-item text">Завтраки на вилле</p>
+              </div>
+              <div class="services__card-price">
+                <h3 class="services__card-price-value"><u>950</u>$</h3>
               </div>
             </div>
-            <div class="services_card">
-              <div class="services_card_content">
-                <div class="services_card_title">
-                  <h3 class="services_card_title-item">Профи</h3>
-                </div>
-                <div class="services_card_text">
-                  <p class="services_card_text-item">
-                    Проживание на вилле 6 ночей
-                  </p>
-                  <p class="services_card_text-item">
-                    Номер категории стандарт
-                  </p>
-                  <p class="services_card_text-item">Экипировка для обучения</p>
-                  <p class="services_card_text-item">
-                    Обучение серфингу 16 тренировок по 2 часа
-                  </p>
-                  <p class="services_card_text-item">Страховка</p>
-                  <p class="services_card_text-item">
-                    Вечеринка с угощениями и дискотекой
-                  </p>
-                  <p class="services_card_text-item">
-                    Авиа перелет Тенерифе -Лансароте - Тенерифе
-                  </p>
-                  <p class="services_card_text-item">
-                    Завтраки и ужины на вилле
-                  </p>
-                </div>
-                <div class="services_card_price">
-                  <h3 class="services_card_price-item"><u>1450</u>$</h3>
-                </div>
+            <div class="services__card">
+              <h3 class="services__card-title">Профи</h3>
+
+              <div class="services__card-text">
+                <p class="services__card-text-item text">
+                  Проживание на вилле 8 ночей
+                </p>
+                <p class="services__card-text-item text">
+                  Номер категории люкс
+                </p>
+                <p class="services__card-text-item text">
+                  Экипировка для обучения
+                </p>
+                <p class="services__card-text-item text">
+                  Обучение серфингу 16 тренировок по 2 часа
+                </p>
+                <p class="services__card-text-item text">Страховка</p>
+                <p class="services__card-text-item text">
+                  Вечеринка с угощениями и дискотекой
+                </p>
+                <p class="services__card-text-item text">
+                  Авиа перелет Тенерифе -Лансароте - Тенерифе
+                </p>
+                <p class="services__card-text-item text">
+                  Завтраки и ужины на вилле
+                </p>
+              </div>
+              <div class="services__card-price">
+                <h3 class="services__card-price-value"><u>1450</u>$</h3>
               </div>
             </div>
           </div>
@@ -613,22 +632,80 @@
       </section>
 
       <section class="map">
-        <div class="map_background">
-          <img class="map_bg" src="/assets/main/map_bg.png" alt />
+        <div class="map__inner">
+          <img class="map__background" src="/assets/main/map_bg.png" alt />
         </div>
       </section>
 
       <section class="form">
         <div class="container">
-          <div class="form_title">
-            <h2 class="form_title_item"></h2>
+          <h2 class="form__title title">ОСТАВИТЬ ЗАЯВКУ</h2>
+          <div class="form__inner">
+            <form class="form__body">
+              <div class="form__group">
+                <input
+                  name="username"
+                  class="form__input"
+                  type="text"
+                  placeholder="Имя"
+                />
+              </div>
+              <div class="form__group">
+                <input
+                  name="phone"
+                  class="form__input"
+                  type="tel"
+                  placeholder="Телефон"
+                />
+              </div>
+              <div class="form__group form__group--message">
+                <textarea
+                  name="message"
+                  class="form__input form__input--textarea"
+                  placeholder="Оставьте сообщение, и мы
+свяжемся с Вами в ближайшее
+время"
+                ></textarea>
+              </div>
+
+              <button class="form__button" type="submit">Отправить</button>
+            </form>
+
+            <div class="form__issue">
+              <div class="question">
+                <p class="form__issue-text">Есть вопрос?</p>
+                <p class="form__issue-text">Вы можете связаться с нами:</p>
+              </div>
+              <div class="feedback">
+                <p class="form__issue-text">WhatsApp, Viber, Telegram</p>
+                <p class="form__issue-text">+3 467 486-37-88</p>
+              </div>
+              <div class="address">
+                <p class="form__issue-text">Avenida grandes playas 79,</p>
+                <p class="form__issue-text">
+                  Corralejo la Oliva Fuerteventura,
+                </p>
+                <p class="form__issue-text">Spain. 35660</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="social">
+        <div class="container">
+          <div class="social__inner">
+            <a href="#" class="social__title">INSTAGRAM</a>
+            <a href="#" class="social__title">FACEBOOK</a>
+            <a href="#" class="social__title">YOUTUBE</a>
           </div>
         </div>
       </section>
     </main>
+
     <footer>
-      <div class="footer_container">
-        <div class="logo"><img src="/assets/logo.svg" alt /></div>
+      <div class="footer__container">
+        <div class="logo__icon logo"><img src="/assets/logo.svg" alt /></div>
       </div>
     </footer>
   </body>
